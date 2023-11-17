@@ -21,7 +21,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)       # disable compiler specific extensions
 
 # executable
 add_executable(bigint bigint/main.cpp
- # add your files
+        bigint/BigInt.h
+        bigint/BigInt.cpp
+        # add your files
 )
 
 # compilersettings
