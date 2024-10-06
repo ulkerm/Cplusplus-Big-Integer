@@ -1,18 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Ys-eWzPk)
-# SWO3-Übungen - WS 2023/24 - Übung 5
-
- Erstellen Sie für die Aufgabe eine entsprechende `CMakeLists.txt`-Datei und stellen Sie sicher, dass Sie keine Dateien aus Ihrer Entwicklungsumgebung dem Repository hinzufügen.
- Erstellen Sie ihre Visual-Studio Solution wie in den Übungen:
-
-```shell
-# open Devloper PowerShell for VS 2022
-cd src
-mkdir build
-cd build
-cmake ..
-# open generated .sln with Visual Studio
-```
-
 ## 1. Big Integer
 
 Erstellen Sie eine C++ Klasse `BigInt`, um mit beliebig großen Ganzzahlen zu rechnen. Bei dieser Implementierung geht es mehr um die Korrektheit als um die Geschwindigkeit oder Kompaktheit der Darstellung. Daher kann folgende, sehr einfache, Darstellungsform gewählt werden. Jede ganze Zahl soll als beliebig großes Feld von kurzen vorzeichenlosen Ganzzahlen (`short unsigned int`) dargestellt werden, wobei jede dieser Ganzzahlen genau eine Dezimalstelle repräsentiert. Die Zahl „33290“ wird also durch ein Feld `a` der Länge 5 mit den Elementen beginnend beim least significant digit `a[0]=0, a[1]=9, a[2]=2, a[3]=3, und a[4]=3` repräsentiert. Dazu kommt noch das Vorzeichen, das einfach als boolescher Wert (`sign`) als Datenkomponente gespeichert werden soll. Als Komplikation kommt noch hinzu, dass Zeiger auf dynamische Felder in C++, technisch gesehen, zwar ihre eigene Größe kennen, diese aber nicht von außen abgefragt werden kann. Deshalb wird auch noch eine weitere Datenkomponente `length` benötigt, in der die Anzahl der Stellen gespeichert werden soll.
